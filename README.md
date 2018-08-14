@@ -9,3 +9,30 @@ www.baidu.com  ajax访问 http://www.baidu2.com 域名不同
                         http://www.baidu.com:8080 端口不同  
 ## 示例代码
 
+```
+ function loadXMLDoc(url)
+    {
+        var xmlhttp;
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {// code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                //解析传回来的数据
+                document.getElementById('A1').innerHTML=xmlhttp.status;
+                document.getElementById('A2').innerHTML=xmlhttp.statusText;
+                document.getElementById('A3').innerHTML=xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET",url,true);
+        xmlhttp.send();
+    }
+    ```   
+
