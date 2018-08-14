@@ -33,6 +33,34 @@ www.baidu.com  ajax访问 http://www.baidu2.com 域名不同
         }
         xmlhttp.open("GET",url,true);
         xmlhttp.send();
-    }
-    ```   
+    }  
+```  
+## dom 
+
+XML DOM 属性
+
+一些典型的 DOM 属性：
+
+    x.nodeName - x 的名称
+    x.nodeValue - x 的值
+    x.parentNode - x 的父节点
+    x.childNodes - x 的子节点
+    x.attributes - x 的属性节点
+
+注释：在上面的列表中，x 是一个节点对象。    
+
+XML DOM 方法
+
+    x.getElementsByTagName(name) - 获取带有指定标签名称的所有元素
+    x.appendChild(node) - 向 x 插入子节点
+    x.removeChild(node) - 从 x 删除子节点
+
+注释：在上面的列表中，x 是一个节点对象。
+
+
+
+
+
+    
+      
 
